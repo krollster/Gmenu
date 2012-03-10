@@ -1,0 +1,17 @@
+GMenu - jQuery Plugin - truncate long menus and create submenus from the truncated items
+
+Copyright (c) 2012 Benjamin Kroll
+Dual licensed under the MIT and GPL licenses.
+Uses the same license as jQuery, see:
+http://docs.jquery.com/License
+
+@version 0.4
+ 
+@param from		(integer)		position _after_ which to cut off to create the sub menu		default 4
+@param filter		(string)		filter for the child element you wish to select				default ''
+@param wrapper		(string|object|boolean)	the wrapper selector string/object to place the submenu in		default object
+@param menu		(string|object|boolean)	the submenu selector string/object to place the cut-off items into	default object
+@param target		(string|object)		the target selector string/object to place the output into		default $(this)
+@param placement	(string)		placement method; jQuery method names apply				default 'append'
+
+returns original target element(s)

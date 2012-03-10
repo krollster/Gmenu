@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Gmenu - Examples</title>
+	<link rel="stylesheet" type="text/css" href="css/gmenu.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.gmenu-0.4.min.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ()
+		{
+			$('.section-subnav').gmenu({ from: 2 });
+			$('#demo2').gmenu({ menu: $('<ol />') });
+			$('#demo3').gmenu({ wrapper: false, menu: false, target: $('#demo3_target') });
+			$('#demo4').gmenu({ wrapper: false, target: '#demo4_target' });
+			$('#demo5').gmenu({ from: 0, filter: 'a:odd', wrapper: false, menu: '#demo5_target' });
+		});
+	</script>
+</head>
+<body>
+	<p class="first">Cut off after 2 elements (default: 4)</p>
+	<pre>.gmenu( { from: 2 } )</pre>
+	<ul class="section-subnav" id="demo1">
+		<li><a href="#">Item 1</a></li>
+		<li><a href="#">Item 2</a></li>
+		<li><a href="#">Item 3</a></li>
+		<li><a href="#">Item 4</a></li>
+		<li><a href="#">Item 5</a></li>
+		<li><a href="#">Item 6</a></li>
+		<li><a href="#">Item 7</a></li>
+		<li><a href="#">Item 8</a></li>
+		<li><a href="#">Item 9</a></li>
+		<li><a href="#">Item 10</a></li>
+	</ul>
+	<br clear="all" />
+	
+	<p>Use ol as sub-menu</p>
+	<pre>.gmenu( { menu: $('&lt;ol /&gt;') } )</pre>
+	<ul id="demo2">
+		<li><a href="#">Item 1</a></li>
+		<li><a href="#">Item 2</a></li>
+		<li><a href="#">Item 3</a></li>
+		<li><a href="#">Item 4</a></li>
+		<li><a href="#">Item 5</a></li>
+		<li><a href="#">Item 6</a></li>
+		<li><a href="#">Item 7</a></li>
+		<li><a href="#">Item 8</a></li>
+		<li><a href="#">Item 9</a></li>
+		<li><a href="#">Item 10</a></li>
+	</ul>
+	
+	<p>No wrapper, no menu, insert into an outside target element (jQuery element passed in)</p>
+	<pre>.gmenu( { wrapper: false, menu: false, target: $('#demo3_target') } )</pre>
+	<div id="demo3" style="border: 1px solid #C00;">
+		<a href="#">Item 1</a>
+		<a href="#">Item 2</a>
+		<a href="#">Item 3</a>
+		<a href="#">Item 4</a>
+		<a href="#">Item 5</a>
+		<a href="#">Item 6</a>
+		<a href="#">Item 7</a>
+		<a href="#">Item 8</a>
+		<a href="#">Item 9</a>
+		<a href="#">Item 10</a>
+	</div>
+	<br clear="all" />
+	<div id="demo3_target" style="border: 1px solid #CCC;">
+		
+	</div>
+	
+	<p>No wrapper, insert into an outside target element (ID passed in)</p>
+	<pre>.gmenu( { wrapper: false, target: '#demo4_target' } )</pre>
+	<div id="demo4" style="border: 1px solid #C00;">
+		<a href="#">Item 1</a>
+		<a href="#">Item 2</a>
+		<a href="#">Item 3</a>
+		<a href="#">Item 4</a>
+		<a href="#">Item 5</a>
+		<a href="#">Item 6</a>
+		<a href="#">Item 7</a>
+		<a href="#">Item 8</a>
+		<a href="#">Item 9</a>
+		<a href="#">Item 10</a>
+	</div>
+	<br clear="all" />
+	<div id="demo4_target" style="border: 1px solid #CCC;">
+		
+	</div>
+	
+	<p>Filter used to cut specific elments (all 'odd' anchor elements), start cut-off from 0 (start of the 'odd' element slice).<br />
+	Insert into target (ID passed in), target is ol within the original parent div.</p>
+	<pre>.gmenu({ from: 0, filter: 'a:odd', wrapper:false, menu: '#demo5_target' })</pre>
+	<div id="demo5">
+		<a href="#">Item 1</a>
+		<a href="#">Item 2</a>
+		<a href="#">Item 3</a>
+		<a href="#">Item 4</a>
+		<a href="#">Item 5</a>
+		<a href="#">Item 6</a>
+		<a href="#">Item 7</a>
+		<a href="#">Item 8</a>
+		<a href="#">Item 9</a>
+		<a href="#">Item 10</a>
+		<a href="#">Item 11</a>
+		<a href="#">Item 12</a>
+		<div id="demo5_target"></div>
+	</div>
+</body>
+</html>
